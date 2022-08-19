@@ -16,70 +16,36 @@
 
 
 ### Header Files: 
-Get it from <a href=""> here</a>
-
-
-
-2. Add the dependency in app level `build.gradle`:
-```bash
-  dependencies {
-	  implementation 'com.github.DevComm-in:Asyncer:v1.0.0'
-  }
-```
+Get it from <a href="https://github.com/i-sachinkumar/SensorsEventManager/tree/main/lib"> here</a>
 
 
 
 ## Example Use Case:
-```kotlin
-class MainActivity : AppCompatActivity() {
-
-    // start btn
-    private lateinit var btn : Button
-    
-    //progressbar
-    private lateinit var progressBar: ProgressBar
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        btn = findViewById(R.id.btn)
-        progressBar = findViewById(R.id.progress_bar)
+```c++
+AccelerationEventQueue accelerationEventQueue;
+GyroscopeEventQueue gyroscopeEventQueue;
 
 
-        btn.setOnClickListener{
-            onClick()
-        }
+void enableAll() {
+	accelerationEventQueue.enableSensor(ASENSOR_TYPE_ACCELEROMETER);
+	gyroscopeEventQueue.enableSensor(ASENSOR_TYPE_GYROSCOPE);
+}
 
-    }
+void disableAll(){
+	accelerationEventQueue.disableSensor();
+	gyroscopeEventQueue.disableSensor();
+}
 
+bool isRecording = false;
 
-    //when start btn is clicked
-    private fun onClick(){
-    
-        //showing indicator that background task is started
-        progressBar.visibility = View.VISIBLE
-        
-        Asyncer().init(object : Task {
-        
-            //your background task
-            override fun backgroundTask() {
-                for(i in 1..100000){
-                    Log.d("count", "backgroundTask: $i")
-                }
-            }
-
-            /** what do you wanna do when task is cmpleted
-            *   I am turning off progressBar and toasting a message 
-            */
-            override fun onTaskCompletion() {
-                progressBar.visibility = View.GONE
-                Toast.makeText(this@MainActivity, "Done", Toast.LENGTH_SHORT).show()
-                Log.d("TAG", "onTaskCompletion")
-            }
-        })
-    }
-
+while (isRecording) {
+       //LOG("data given below")
+       accelerationEventQueue.val[0]
+       accelerationEventQueue.val[1]
+       accelerationEventQueue.val[2] 
+       gyroscopeEventQueue.val[0]
+       gyroscopeEventQueue.val[1]
+       gyroscopeEventQueue.val[2]
 }
 
 ```
