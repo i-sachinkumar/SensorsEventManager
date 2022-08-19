@@ -22,8 +22,8 @@ Get it from <a href="https://github.com/i-sachinkumar/SensorsEventManager/tree/m
 
 ## Example Use Case:
 ```c++
-AccelerationEventQueue accelerationEventQueue;
-GyroscopeEventQueue gyroscopeEventQueue;
+AccelerationEventQueue accelerationEventQueue;	//ACCELEROMETER
+GyroscopeEventQueue gyroscopeEventQueue;	//GYROSCOPE
 
 
 void enableAll() {
