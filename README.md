@@ -8,6 +8,8 @@
 <!-- <a href="https://www.linkedin.com/in/"> -->
 <!--    <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Connect with us" /></a> -->
 
+Handled By : <a href="github.com/i-sachinkumar">@i-sachinkumar</a>
+
 
 # SensorsEventManager (Sensors Handeling Library)
 - Android NDK library in C++, providing device’s motion sensors data<br>
