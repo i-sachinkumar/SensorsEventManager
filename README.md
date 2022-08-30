@@ -11,7 +11,7 @@
 Handled By : <a href="https://github.com/i-sachinkumar">@i-sachinkumar</a>
 
 
-# SensorsEventManager (Sensors Handeling Library)
+# SensorsEventManager (Sensors Handling Library)
 - Android NDK library in C++, providing device’s motion sensors data<br>
 - Header only ibrary<br>
 - Super easy to Implement, handle, and extend<br>
